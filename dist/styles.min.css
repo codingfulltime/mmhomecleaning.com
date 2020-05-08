@@ -12,9 +12,6 @@ html {
   overflow-y: scroll;
   scroll-behavior: smooth; }
 
-body {
-  color: red; }
-
 .logo {
   display: none; }
 
@@ -441,6 +438,7 @@ footer {
         font-size: 1rem; }
 
 .benefits-modal {
+  display: none;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -466,6 +464,14 @@ footer {
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 1.5rem; }
+    .benefits-modal .modal-content button {
+      position: absolute;
+      bottom: 100px;
+      padding: 20px 30px;
+      left: 100px;
+      height: 30px;
+      background: red;
+      color: #fff; }
 
 @media (min-width: 720px) {
   .hamburger-menu {

@@ -9,6 +9,23 @@ const left_Btn_Carousel = document.querySelector('.carouselButton-left');
 
 const slideWidth = carousel_slides[0].getBoundingClientRect().width;
 
+// modal Benefits
+const modal = document.getElementById('benefits-modal');
+const headerBtn = document.getElementById('mainBtn');
+const closeBtnModal = document.getElementById('closeModal');
+
+headerBtn.addEventListener('click', openModal );
+closeBtnModal.addEventListener('click', closeModal );
+
+function openModal(){
+    modal.style.display = 'block';
+}
+function closeModal(){
+    modal.style.display = 'none';
+}
+
+
+
 // arrange the slides next to one another
 const setSlidePosition = (slide, index) => {
     slide.style.left = slideWidth * index + 'px';
@@ -46,4 +63,8 @@ menuIcon.addEventListener('click', () => {
     navbar.classList.toggle('change');
 });
 
-s
+
+
+
+
+
