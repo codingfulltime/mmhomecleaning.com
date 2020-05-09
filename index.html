@@ -35,7 +35,7 @@
     </nav>
 
     <div class="header-column-1">
-        <h1>M&M CLEANING SERVICES</h1>
+        <h1><span>M&M</span> CLEANING SERVICES</h1>
         <img src="img/logo.png" alt="m & m cleaning services logo" class="logo">
         <a href="#0" class="header-main-button" id="mainBtn">Contact Us</a>
     </div>
@@ -92,14 +92,27 @@
     <div class="title-benefits">
         <h2>Why Choose Us</h2>
     </div>
+
     <div class="benefits-col benefits-1">
         <span>We are affordable</span>
+        <div class="benefits-text">
+            <i class="fas fa-piggy-bank"></i>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, sapiente?</p>
+        </div>
     </div>
     <div class="benefits-col benefits-2">
         <span>We use high quality products and tools</span>
+        <div class="benefits-text">
+            <i class="fab fa-battle-net"></i>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, sapiente?</p>
+        </div>
     </div>
     <div class="benefits-col benefits-3">
         <span>You will be satisfied</span>
+        <div class="benefits-text">
+            <i class="far fa-smile"></i>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, sapiente?</p>
+        </div>
     </div>
     
 </section>
@@ -149,7 +162,7 @@
         </button>
     </div>
 </section>
-<section id="contactForm">
+<section id="contactForm" class="contactForm">
     <div class="contact-form">
         <h2>Contact Us !</h2>
         <form action="" class="main-form">
@@ -166,11 +179,21 @@
 </section>
 <div id="modals">
     <div id="benefits-modal" class="benefits-modal">
-        <div class="modal-content">
-            <img src="img/affordable.jpg" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad architecto asperiores at aut expedita harum magni quibusdam recusandae vero!</p>
-            <button type="button" id="closeModal">Close</button>
-        </div>
+            <div id="formModal" class="form-modal">
+                <h2>Contact Us !</h2>
+                <form action="" class="form-popup">
+                    <label for="name-form">Name:</label>
+                    <input type="text" id="name-form" class="name-form" placeholder="Enter your name">
+
+                    <label for="email-form">Email:</label>
+                    <input type="email" id="email-form" class="email-form" placeholder="Enter your email">
+
+                    <label for="message-form">Message:</label>
+                    <textarea name="mainForm" id="message-form" placeholder="Enter your message"></textarea>
+                </form>
+                <button type="submit" class="form-modal-button">Send</button>
+                <button type="submit" class="closeModalBtn" id="closeButton">Close</button>
+            </div>
     </div>
 </div>
 <footer id="footer" class="main-footer">

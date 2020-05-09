@@ -1,22 +1,29 @@
 // hamburger menu
 const menuIcon = document.querySelector('.hamburger-menu');
-const navbar = document.querySelector('.main-nav');
+const navbar = document.getElementById('main-nav');
 
+// Slider
 const carousel_tracker = document.querySelector('.carousel-tracker');
 const carousel_slides = Array.from(carousel_tracker.children);
 const right_Btn_Carousel = document.querySelector('.carouselButton-right');
 const left_Btn_Carousel = document.querySelector('.carouselButton-left');
-
 const slideWidth = carousel_slides[0].getBoundingClientRect().width;
 
 // modal Benefits
 const modal = document.getElementById('benefits-modal');
 const headerBtn = document.getElementById('mainBtn');
+const closeModalBtn = document.getElementById('closeButton');
 const closeBtnModal = document.getElementById('closeModal');
 
-headerBtn.addEventListener('click', openModal );
-closeBtnModal.addEventListener('click', closeModal );
 
+
+// Event Listeners
+headerBtn.addEventListener('click', openModal );
+closeModalBtn.addEventListener('click', closeModal );
+menuIcon.addEventListener('click', useHamburgerMenu);
+
+
+// Modal Buttons
 function openModal(){
     modal.style.display = 'block';
 }
@@ -24,6 +31,10 @@ function closeModal(){
     modal.style.display = 'none';
 }
 
+// Open Hamburger menu
+function useHamburgerMenu() {
+    navbar.classList.toggle('change');
+}
 
 
 // arrange the slides next to one another
@@ -59,9 +70,9 @@ right_Btn_Carousel.addEventListener('click', e => {
 
 // hamburger menu
 
-menuIcon.addEventListener('click', () => {
-    navbar.classList.toggle('change');
-});
+
+
+
 
 
 

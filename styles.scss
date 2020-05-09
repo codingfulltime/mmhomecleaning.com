@@ -39,17 +39,22 @@ html {
   .header-column-1 {
     grid-row: 1/2;
     grid-column: 1/2;
-    background: $main-color;
+    background-image: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
     display: flex;
     justify-content: center;
     align-items: center;
 
     h1 {
       color: #fff;
+      text-shadow: -5px 5px 5px #000;
       font-size: $titleSmallSize;
       text-align: center;
       margin-top: 15%;
       font-family: 'Dosis', sans-serif;
+
+      span {
+        color: #1BFFFF;
+      }
     }
   }
 
@@ -64,6 +69,12 @@ html {
       font-size: 1.3rem;
       font-family: $mainTextFonts;
       color: lighten($secondary-color, 15%);
+
+      h2 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: $textMediumSize;
+      }
 
       p {
         display: none;
@@ -102,6 +113,11 @@ html {
       top: 0;
       z-index: 5;
 
+      h2 {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
       p {
         display: none;
       }
@@ -126,6 +142,7 @@ html {
     height: 100%;
     font-size: 2.4rem;
     background: darken($main-color, 30%);
+    background-image: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
     position: absolute;
     z-index: 90;
     border-radius: 50% 0 50% 0;
@@ -163,7 +180,7 @@ html {
     position: fixed;
     right: 10px;
     top: 10px;
-    z-index: 100;
+    z-index: 1000;
     transition: transform 1s ease-in-out;
     background: #fff;
     border-radius: 100%;
@@ -194,9 +211,8 @@ html {
   top: 0;
   bottom: 0;
   height: 100%;
-  z-index: 9;
+  z-index: 80;
 }
-
 
 .call-now {
   width: 100%;
@@ -244,6 +260,7 @@ html {
     grid-row: 1/2;
     grid-column: 1/2;
     background: $main-color;
+    background-image: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
     color: #fff;
     text-align: center;
     font-size: 2rem;
@@ -314,6 +331,7 @@ html {
   grid-template-columns: 1fr;
   grid-template-rows: 100px 1fr 1fr 1fr;
   background: $main-color;
+  background-image: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
   padding: 15px;
   height: 100vh;
   grid-gap: 15px;
@@ -337,12 +355,60 @@ html {
     align-items: flex-end;
     padding: 10px;
     text-align: center;
+    position: relative;
+
+    .benefits-text {
+      background-image: linear-gradient(to right top, #6a11cb, #5c38db, #4c4fe8, #3963f3, #2575fc);
+      position: absolute;
+      font-size: $textSmallSize;
+      color: #fff;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 15px;
+      transition: all .7s ease;
+      opacity: 0;
+      p {
+        line-height: 2;
+        margin: 15px 0;
+      }
+      i {
+        font-size: 2rem;
+      }
+      button {
+        width: 30%;
+        margin: 15px auto;
+        border-radius: 30px;
+        color: #fff;
+        background: $terciary-color;
+        border: 2px #fff solid;
+        padding: 10px 25px;
+        font-size: 0.8rem;
+
+        &:hover {
+          background: darken($terciary-color, 15%);
+          border: 2px solid $main-color;
+        }
+      }
+    }
+    &:hover .benefits-text {
+      border: 3px solid #000;
+      opacity: 1;
+    }
+
     span {
       color: #fff;
       font-size: $textSmallSize;
       background: rgba(0, 0, 0, 0.9);
       padding: 5px;
     }
+
   }
 
   .benefits-1 {
@@ -443,14 +509,12 @@ html {
 }
 
 
-#contactForm {
+.contactForm {
   display: flex;
   font-family: $mainTextFonts;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
-  background: linear-gradient(rgba(15, 167, 136, 0.6), rgba(15, 167, 136, 0.6)),
-          url("../img/servicesBackground.jpg") center / cover no-repeat fixed;
+  background-image: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
   padding: 10px;
   line-height: 1.7;
 
@@ -578,38 +642,78 @@ footer {
   height: 100%;
   width: 100%;
   background: rgba(0,0,0,0.8);
-  z-index: 1000;
+  z-index: 5;
   overflow: auto;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  .modal-content {
+
+  .form-modal {
     position: absolute;
-    width: 65vw;
-    height: 50vh;
+    width: 80vw;
+    height: 80vh;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    p {
-      position: absolute;
-      width: 80%;
+
+    background: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: $mainTextFonts;
+    margin: auto;
+    background-image: linear-gradient(to right top, #6a11cb, #5c38db, #4c4fe8, #3963f3, #2575fc);
+    h2 {
+      font-size: $titleSmallSize;
+      font-family: $titleFonts;
+      text-align: center;
       color: #fff;
-      top: 60%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: $textMediumSize;
     }
-    button  {
+
+    .form-modal-button {
+      bottom: 10px;
+      left: 10px;
+      padding: 5px 40px;
+      background: $main-color;
+    }
+
+    .closeModalBtn {
+      bottom: 10px;
+      right: 10px;
+      padding: 5px 10px;
+      background: grey;
+    }
+
+    .form-modal-button,
+    .closeModalBtn {
       position: absolute;
-      bottom: 100px;
-      padding: 20px 30px;
-      left: 100px;
-      height: 30px;
-      background: red;
+      border-radius: 10px;
       color: #fff;
+      font-size: 1rem;
+      &:hover {
+        background: darken($main-color, 10%);
+      }
+    }
+    .form-popup {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      font-size: $textSmallSize;
+
+      label {
+        color: #fff;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: $titleSmallSize;
+      }
+      input,
+      textarea {
+        font-size: $textSmallSize;
+        padding: 15px;
+      }
     }
   }
+
 }
 
 @media (min-width: 720px){
@@ -758,7 +862,12 @@ footer {
 
     .benefits-col {
       align-items: center;
-      font-size: 2.3rem;
+      font-size: $textMediumSize;
+      .benefits-text {
+        i {
+          font-size: 4rem;
+        }
+      }
     }
     .benefits-1 {
       grid-row: 2/3;
@@ -786,7 +895,7 @@ footer {
     }
   }
 
-  #contactForm {
+  .contactForm {
     height: 70vh;
     .contact-form {
       height: 100%;
@@ -821,6 +930,13 @@ footer {
       }
     }
   }
+
+  .benefits-modal {
+    .form-modal {
+      height: 50vh;
+    }
+  }
+
   footer {
    height: 50vh;
     .footer-container {
@@ -890,9 +1006,10 @@ footer {
 
       .header-main-button {
         border-radius: 30px;
-        color: green;
         font-weight: bold;
-        background: lighten($main-color, 30%);
+        background: lighten($main-color, 5%);
+        color: #fff;
+
         border: 2px #fff solid;
         display: inline-block;
         padding: 10px 25px;
@@ -1027,7 +1144,7 @@ footer {
   } // end services
 
   #benefits {
-    height: 80vh;
+    height: 100vh;
     grid-template-rows: 1fr repeat(5, 1fr);
     grid-template-columns: 1fr 1fr 1fr;
     font-size: $textMediumSize;
@@ -1043,7 +1160,12 @@ footer {
 
     .benefits-col {
       align-items: center;
-      font-size: 2.3rem;
+      .benefits-text {
+        font-size: $textMediumSize;
+        i {
+          font-size: 7rem;
+        }
+      }
     }
     .benefits-1 {
       grid-row: 2/5;
@@ -1082,6 +1204,13 @@ footer {
       p {
         font-size: 1.5rem;
       }
+    }
+  }
+
+  .benefits-modal {
+    .form-modal {
+      height: 80vh;
+      width: 50vw;
     }
   }
 

@@ -41,16 +41,19 @@ html {
   #main-header .header-column-1 {
     grid-row: 1/2;
     grid-column: 1/2;
-    background: #0fa788;
+    background-image: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
     display: flex;
     justify-content: center;
     align-items: center; }
     #main-header .header-column-1 h1 {
       color: #fff;
+      text-shadow: -5px 5px 5px #000;
       font-size: 2.1rem;
       text-align: center;
       margin-top: 15%;
       font-family: 'Dosis', sans-serif; }
+      #main-header .header-column-1 h1 span {
+        color: #1BFFFF; }
   #main-header .header-column-2 {
     background: url("../img/showcase-left.jpg") center/cover no-repeat;
     grid-row: 2/3; }
@@ -61,6 +64,10 @@ html {
       font-size: 1.3rem;
       font-family: "Poppins", sans-serif;
       color: #98c5cb; }
+      #main-header .header-column-2 .header-column-2-text h2 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.5rem; }
       #main-header .header-column-2 .header-column-2-text p {
         display: none; }
   #main-header .header-column-3 {
@@ -90,6 +97,9 @@ html {
       right: 0;
       top: 0;
       z-index: 5; }
+      #main-header .header-column-3 .header-column-3-text h2 {
+        text-transform: uppercase;
+        font-weight: bold; }
       #main-header .header-column-3 .header-column-3-text p {
         display: none; }
 
@@ -109,6 +119,7 @@ html {
     height: 100%;
     font-size: 2.4rem;
     background: #021b16;
+    background-image: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
     position: absolute;
     z-index: 90;
     border-radius: 50% 0 50% 0; }
@@ -137,7 +148,7 @@ html {
   position: fixed;
   right: 10px;
   top: 10px;
-  z-index: 100;
+  z-index: 1000;
   transition: transform 1s ease-in-out;
   background: #fff;
   border-radius: 100%; }
@@ -158,7 +169,7 @@ html {
   top: 0;
   bottom: 0;
   height: 100%;
-  z-index: 9; }
+  z-index: 80; }
 
 .call-now {
   width: 100%;
@@ -194,6 +205,7 @@ html {
     grid-row: 1/2;
     grid-column: 1/2;
     background: #0fa788;
+    background-image: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
     color: #fff;
     text-align: center;
     font-size: 2rem;
@@ -242,6 +254,7 @@ html {
   grid-template-columns: 1fr;
   grid-template-rows: 100px 1fr 1fr 1fr;
   background: #0fa788;
+  background-image: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
   padding: 15px;
   height: 100vh;
   grid-gap: 15px;
@@ -260,7 +273,45 @@ html {
     justify-content: center;
     align-items: flex-end;
     padding: 10px;
-    text-align: center; }
+    text-align: center;
+    position: relative; }
+    #benefits .benefits-col .benefits-text {
+      background-image: linear-gradient(to right top, #6a11cb, #5c38db, #4c4fe8, #3963f3, #2575fc);
+      position: absolute;
+      font-size: 1rem;
+      color: #fff;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 15px;
+      transition: all .7s ease;
+      opacity: 0; }
+      #benefits .benefits-col .benefits-text p {
+        line-height: 2;
+        margin: 15px 0; }
+      #benefits .benefits-col .benefits-text i {
+        font-size: 2rem; }
+      #benefits .benefits-col .benefits-text button {
+        width: 30%;
+        margin: 15px auto;
+        border-radius: 30px;
+        color: #fff;
+        background: #A468FF;
+        border: 2px #fff solid;
+        padding: 10px 25px;
+        font-size: 0.8rem; }
+        #benefits .benefits-col .benefits-text button:hover {
+          background: #761cff;
+          border: 2px solid #0fa788; }
+    #benefits .benefits-col:hover .benefits-text {
+      border: 3px solid #000;
+      opacity: 1; }
     #benefits .benefits-col span {
       color: #fff;
       font-size: 1rem;
@@ -339,16 +390,15 @@ html {
         .reviews-carousel .carousel-container .carousel-item .text-reviews span {
           color: lightgreen; }
 
-#contactForm {
+.contactForm {
   display: flex;
   font-family: "Poppins", sans-serif;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
-  background: linear-gradient(rgba(15, 167, 136, 0.6), rgba(15, 167, 136, 0.6)), url("../img/servicesBackground.jpg") center/cover no-repeat fixed;
+  background-image: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
   padding: 10px;
   line-height: 1.7; }
-  #contactForm .contact-form {
+  .contactForm .contact-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -357,30 +407,30 @@ html {
     filter: blur(10%);
     padding: 10px;
     border-radius: 20px; }
-    #contactForm .contact-form h2 {
+    .contactForm .contact-form h2 {
       color: #0fa788;
       font-size: 2.1rem;
       font-family: "Dosis", sans-serif;
       margin: auto; }
-    #contactForm .contact-form label {
+    .contactForm .contact-form label {
       color: #0fa788;
       font-size: 1rem;
       font-weight: 500; }
-  #contactForm .main-form {
+  .contactForm .main-form {
     display: flex;
     flex-direction: column;
     height: 100%; }
-    #contactForm .main-form input {
+    .contactForm .main-form input {
       border-radius: 20px;
       padding: 10px;
       border: 1px solid grey; }
-      #contactForm .main-form input::placeholder {
+      .contactForm .main-form input::placeholder {
         font-size: 1rem; }
-    #contactForm .main-form textarea {
+    .contactForm .main-form textarea {
       border: 1px solid grey;
       border-radius: 20px;
       height: 100%; }
-      #contactForm .main-form textarea::placeholder {
+      .contactForm .main-form textarea::placeholder {
         padding-top: 20px;
         padding-left: 10px;
         font-size: 1rem; }
@@ -443,35 +493,63 @@ footer {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
-  z-index: 1000;
+  z-index: 5;
   overflow: auto;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0; }
-  .benefits-modal .modal-content {
+  .benefits-modal .form-modal {
     position: absolute;
-    width: 65vw;
-    height: 50vh;
+    width: 80vw;
+    height: 80vh;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
-    .benefits-modal .modal-content p {
-      position: absolute;
-      width: 80%;
-      color: #fff;
-      top: 60%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 1.5rem; }
-    .benefits-modal .modal-content button {
-      position: absolute;
-      bottom: 100px;
-      padding: 20px 30px;
-      left: 100px;
-      height: 30px;
-      background: red;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: "Poppins", sans-serif;
+    margin: auto;
+    background-image: linear-gradient(to right top, #6a11cb, #5c38db, #4c4fe8, #3963f3, #2575fc); }
+    .benefits-modal .form-modal h2 {
+      font-size: 2.1rem;
+      font-family: "Dosis", sans-serif;
+      text-align: center;
       color: #fff; }
+    .benefits-modal .form-modal .form-modal-button {
+      bottom: 10px;
+      left: 10px;
+      padding: 5px 40px;
+      background: #0fa788; }
+    .benefits-modal .form-modal .closeModalBtn {
+      bottom: 10px;
+      right: 10px;
+      padding: 5px 10px;
+      background: grey; }
+    .benefits-modal .form-modal .form-modal-button,
+    .benefits-modal .form-modal .closeModalBtn {
+      position: absolute;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 1rem; }
+      .benefits-modal .form-modal .form-modal-button:hover,
+      .benefits-modal .form-modal .closeModalBtn:hover {
+        background: #0b7862; }
+    .benefits-modal .form-modal .form-popup {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      font-size: 1rem; }
+      .benefits-modal .form-modal .form-popup label {
+        color: #fff;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 2.1rem; }
+      .benefits-modal .form-modal .form-popup input,
+      .benefits-modal .form-modal .form-popup textarea {
+        font-size: 1rem;
+        padding: 15px; }
 
 @media (min-width: 720px) {
   .hamburger-menu {
@@ -576,7 +654,9 @@ footer {
         font-size: 4rem; }
     #benefits .benefits-col {
       align-items: center;
-      font-size: 2.3rem; }
+      font-size: 1.5rem; }
+      #benefits .benefits-col .benefits-text i {
+        font-size: 4rem; }
     #benefits .benefits-1 {
       grid-row: 2/3;
       grid-column: 1/2; }
@@ -593,27 +673,30 @@ footer {
   #reviews .fas {
     font-size: 2rem; }
 
-  #contactForm {
+  .contactForm {
     height: 70vh; }
-    #contactForm .contact-form {
+    .contactForm .contact-form {
       height: 100%;
       padding: 20px;
       width: 50%;
       margin: auto; }
-      #contactForm .contact-form h2 {
+      .contactForm .contact-form h2 {
         font-size: 4rem;
         text-align: center; }
-      #contactForm .contact-form .main-form {
+      .contactForm .contact-form .main-form {
         justify-items: center; }
-        #contactForm .contact-form .main-form label {
+        .contactForm .contact-form .main-form label {
           font-size: 1.5rem;
           margin-bottom: 5px; }
-        #contactForm .contact-form .main-form input {
+        .contactForm .contact-form .main-form input {
           margin-bottom: 15px; }
-          #contactForm .contact-form .main-form input::placeholder {
+          .contactForm .contact-form .main-form input::placeholder {
             font-size: 1rem; }
-        #contactForm .contact-form .main-form textarea::placeholder {
+        .contactForm .contact-form .main-form textarea::placeholder {
           font-size: 1.2rem; }
+
+  .benefits-modal .form-modal {
+    height: 50vh; }
 
   footer {
     height: 50vh; }
@@ -666,9 +749,9 @@ footer {
         animation-fill-mode: forwards; }
       #main-header .header-column-1 .header-main-button {
         border-radius: 30px;
-        color: green;
         font-weight: bold;
-        background: #5ef1d3;
+        background: #11be9b;
+        color: #fff;
         border: 2px #fff solid;
         display: inline-block;
         padding: 10px 25px;
@@ -768,7 +851,7 @@ footer {
       line-height: 1.7; }
 
   #benefits {
-    height: 80vh;
+    height: 100vh;
     grid-template-rows: 1fr repeat(5, 1fr);
     grid-template-columns: 1fr 1fr 1fr;
     font-size: 1.5rem;
@@ -779,8 +862,11 @@ footer {
       #benefits .title-benefits h2 {
         font-size: 4rem; }
     #benefits .benefits-col {
-      align-items: center;
-      font-size: 2.3rem; }
+      align-items: center; }
+      #benefits .benefits-col .benefits-text {
+        font-size: 1.5rem; }
+        #benefits .benefits-col .benefits-text i {
+          font-size: 7rem; }
     #benefits .benefits-1 {
       grid-row: 2/5;
       grid-column: 1/2; }
@@ -809,6 +895,10 @@ footer {
         color: #0fa788; }
       #reviews .reviews-text p {
         font-size: 1.5rem; }
+
+  .benefits-modal .form-modal {
+    height: 80vh;
+    width: 50vw; }
 
   footer .footer-container {
     width: 70%;
