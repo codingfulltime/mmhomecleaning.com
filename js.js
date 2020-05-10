@@ -15,13 +15,10 @@ const headerBtn = document.getElementById('mainBtn');
 const closeModalBtn = document.getElementById('closeButton');
 const closeBtnModal = document.getElementById('closeModal');
 
-
-
 // Event Listeners
 headerBtn.addEventListener('click', openModal );
 closeModalBtn.addEventListener('click', closeModal );
 menuIcon.addEventListener('click', useHamburgerMenu);
-
 
 // Modal Buttons
 function openModal(){
@@ -35,7 +32,6 @@ function closeModal(){
 function useHamburgerMenu() {
     navbar.classList.toggle('change');
 }
-
 
 // arrange the slides next to one another
 const setSlidePosition = (slide, index) => {

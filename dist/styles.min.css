@@ -12,9 +12,6 @@ html {
   overflow-y: scroll;
   scroll-behavior: smooth; }
 
-.logo {
-  display: none; }
-
 #main-header {
   height: 100vh;
   display: grid;
@@ -25,6 +22,13 @@ html {
   line-height: 1.7;
   z-index: 7;
   font-size: 1rem; }
+  #main-header .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    position: absolute;
+    left: 15px;
+    top: 15px; }
   #main-header .header-main-button {
     border-radius: 30px;
     color: #fff;
@@ -245,6 +249,9 @@ html {
     display: inline-block;
     padding: 10px 25px;
     font-size: 0.8rem; }
+    #services .services-button:focus {
+      outline: thin transparent;
+      border: 2px solid purple; }
   #services .services-pic-title {
     font-size: 2rem;
     margin-top: 15px; }
@@ -391,18 +398,21 @@ html {
           color: lightgreen; }
 
 .contactForm {
+  height: 70vh;
   display: flex;
-  font-family: "Poppins", sans-serif;
   justify-content: center;
   flex-direction: column;
+  font-family: "Poppins", sans-serif;
   background-image: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
   padding: 10px;
   line-height: 1.7; }
+  .contactForm .contact-picture {
+    display: none; }
   .contactForm .contact-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 80%;
+    height: 95%;
     background: #fff;
     filter: blur(10%);
     padding: 10px;
@@ -419,21 +429,56 @@ html {
   .contactForm .main-form {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     height: 100%; }
+    .contactForm .main-form .mainFormBtn {
+      border-radius: 20px;
+      padding: 10px;
+      font-size: 1rem;
+      background: #A468FF;
+      color: #fff;
+      margin-top: 10px;
+      width: 50%; }
+      .contactForm .main-form .mainFormBtn:hover {
+        background: #761cff;
+        border: 2px solid #0fa788; }
+      .contactForm .main-form .mainFormBtn:focus {
+        outline: thin transparent;
+        border: 2px solid purple; }
     .contactForm .main-form input {
       border-radius: 20px;
       padding: 10px;
       border: 1px solid grey; }
+      .contactForm .main-form input[type="text"], .contactForm .main-form input[type="email"] {
+        color: purple;
+        font-size: 1.1rem; }
       .contactForm .main-form input::placeholder {
         font-size: 1rem; }
+      .contactForm .main-form input:focus {
+        outline: thin transparent;
+        border-bottom: 5px solid purple;
+        background: #e1ceff;
+        color: purple; }
     .contactForm .main-form textarea {
       border: 1px solid grey;
       border-radius: 20px;
-      height: 100%; }
+      height: 200px;
+      resize: none; }
+      .contactForm .main-form textarea[type="text"] {
+        color: purple;
+        font-size: 1.1rem;
+        padding: 10px 0 0 10px;
+        font-weight: bold; }
       .contactForm .main-form textarea::placeholder {
         padding-top: 20px;
         padding-left: 10px;
-        font-size: 1rem; }
+        font-size: 1rem;
+        font-weight: 500; }
+      .contactForm .main-form textarea:focus {
+        outline: thin transparent;
+        border-bottom: 5px solid purple;
+        background: #e1ceff;
+        color: purple; }
 
 footer {
   height: 60vh;
@@ -493,7 +538,7 @@ footer {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
-  z-index: 5;
+  z-index: 10;
   overflow: auto;
   top: 0;
   bottom: 0;
@@ -558,6 +603,12 @@ footer {
   #main-header {
     grid-template-rows: 70px 200px 1fr 1fr;
     grid-template-columns: 1fr 1fr; }
+    #main-header .logo {
+      top: 15px;
+      left: 30px;
+      width: 100px;
+      height: 100px;
+      z-index: 100; }
     #main-header .main-nav {
       height: 100%;
       grid-row: 1/2;
@@ -674,9 +725,9 @@ footer {
     font-size: 2rem; }
 
   .contactForm {
-    height: 70vh; }
+    height: 60vh; }
     .contactForm .contact-form {
-      height: 100%;
+      height: 95%;
       padding: 20px;
       width: 50%;
       margin: auto; }
@@ -692,8 +743,10 @@ footer {
           margin-bottom: 15px; }
           .contactForm .contact-form .main-form input::placeholder {
             font-size: 1rem; }
-        .contactForm .contact-form .main-form textarea::placeholder {
-          font-size: 1.2rem; }
+        .contactForm .contact-form .main-form textarea {
+          height: 150px; }
+          .contactForm .contact-form .main-form textarea::placeholder {
+            font-size: 1.2rem; }
 
   .benefits-modal .form-modal {
     height: 50vh; }
@@ -716,14 +769,18 @@ footer {
         grid-column: 1/3;
         grid-row: 2/3; } }
 @media (min-width: 1100px) {
-  .logo {
-    display: block;
-    width: 90%;
-    margin-bottom: 100px; }
-
   #main-header {
     grid-template-rows: 100px 1fr 200px 200px;
     grid-template-columns: 20% 1fr 1fr; }
+    #main-header .logo {
+      position: absolute;
+      display: block;
+      height: 200px;
+      width: 200px;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-bottom: 50px;
+      border-radius: 100%; }
     #main-header .main-nav {
       background: rgba(0, 0, 0, 0.2);
       grid-row: 1/2;
@@ -737,7 +794,7 @@ footer {
       grid-row: 1/5;
       grid-column: 1/2;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center; }
       #main-header .header-column-1 h1 {
         position: absolute;
@@ -757,11 +814,12 @@ footer {
         padding: 10px 25px;
         font-size: 1.3rem;
         position: static;
-        transform: translateX(0); }
+        transform: translateX(0);
+        margin-bottom: 90px; }
     #main-header .header-column-2 {
       grid-row: 1/5;
       grid-column: 2/3;
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/showcase-left.jpg") center/cover no-repeat;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/showcase-left.jpg") center/cover no-repeat;
       display: flex;
       flex-direction: column;
       justify-content: flex-end; }
@@ -895,6 +953,37 @@ footer {
         color: #0fa788; }
       #reviews .reviews-text p {
         font-size: 1.5rem; }
+
+  .contactForm {
+    height: 100vh;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+    .contactForm .contact-form .mainFormBtn {
+      width: 30%; }
+    .contactForm .contact-picture {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 90%;
+      color: #fff;
+      border-radius: 20px;
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/contactPic.jpg") center/cover no-repeat;
+      font-size: 2.5rem;
+      width: 45%; }
+      .contactForm .contact-picture h2 {
+        color: yellow;
+        font-family: "Dosis", sans-serif; }
+      .contactForm .contact-picture a {
+        color: #fff; }
+        .contactForm .contact-picture a:hover {
+          border-bottom: 2px #fff solid; }
+    .contactForm .contact-form {
+      margin: 0;
+      width: 45%; }
+      .contactForm .contact-form textarea {
+        height: 150px; }
 
   .benefits-modal .form-modal {
     height: 80vh;
