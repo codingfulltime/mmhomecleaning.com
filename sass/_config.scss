@@ -1,4 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
 
+img {
+  width: 100%;
+}
 
 html {
   overflow-y: scroll;
@@ -25,14 +35,3 @@ body {
   background: linear-gradient(to right top, #6a11cb, #5c38db, #4c4fe8, #3963f3, #2575fc);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
-}
-
-img {
-  width: 100%;
-}
