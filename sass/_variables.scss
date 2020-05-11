@@ -1,6 +1,8 @@
+// Font Family
 $titleFonts: 'Dosis', sans-serif;
 $mainTextFonts:'Poppins', sans-serif;
 
+// Colors
 $main-color: #0fa788;
 $secondary-color: #65a9b1;
 $terciary-color: #A468FF;
@@ -11,23 +13,14 @@ $titleSmallSize: 2.1rem;
 $textSmallSize: 1rem;
 $btnTextSmallSize: 1.8rem;
 
-// Medium size 720px
+// Font Medium size 720px
 $titleMediumSize: 4rem;
 $textMediumSize: 1.5rem;
 
-// Large size 1100px
+// Font Large size 1100px
 $titleLargeSize: 2.8rem; // Only applied to services h2
 $textLargeSize: 1.8rem;
 
 
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
-}
-
-img {
-  width: 100%;
-}
+// Vh Height
+$viewPortHeight: 100vh;

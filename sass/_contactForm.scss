@@ -1,0 +1,104 @@
+
+.contactForm {
+  @include useFlexbox(column, center, center);
+  @include mainGradientColor();
+  height: 70vh;
+  font-family: $mainTextFonts;
+  padding: 10px;
+  line-height: 1.7;
+
+  .contact-picture {
+    display: none;
+  }
+
+  .contact-form {
+    @include useFlexbox(column, center, stretch);
+    height: 95%;
+    background: #fff;
+    filter: blur(10%);
+    padding: 10px;
+    border-radius: 20px;
+
+    h2 {
+      color: $main-color;
+      font-size: $titleSmallSize;
+      font-family: $titleFonts;
+      margin: auto;
+    }
+    label {
+      color: $main-color;
+      font-size: $textSmallSize;
+      font-weight: 500;
+    }
+  }
+
+  .main-form {
+    @include useFlexbox(column, space-around, stretch);
+    height: 100%;
+
+    .mainFormBtn {
+      border-radius: 20px;
+      padding: 10px;
+      font-size: 1rem;
+      background: $terciary-color;
+      color: #fff;
+      margin-top: 10px;
+      width: 50%;
+      &:hover {
+        background: darken($terciary-color, 15%);
+        border: 2px solid $main-color;
+      }
+      &:focus {
+        outline: thin transparent;
+        border: 2px solid purple;
+      }
+    }
+
+    input {
+      border-radius: 20px;
+      padding: 10px;
+      border: 1px solid grey;
+
+      &[type="text"],
+      &[type="email"]{
+        color: purple;
+        font-size: 1.1rem;
+      }
+
+      &::placeholder {
+        font-size: 1rem;
+      }
+
+      &:focus {
+        outline: thin transparent;
+        border-bottom: 5px solid purple;
+        background: lighten($terciary-color, 20%);
+        color: purple;
+      }
+    }
+    textarea {
+      border: 1px solid grey;
+      border-radius: 20px;
+      height: 200px;
+      resize: none;
+      &[type="text"]{
+        color: purple;
+        font-size: 1.1rem;
+        padding: 10px 0 0 10px;
+        font-weight: bold;
+      }
+      &::placeholder {
+        padding-top: 20px;
+        padding-left: 10px;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      &:focus {
+        outline: thin transparent;
+        border-bottom: 5px solid purple;
+        background: lighten($terciary-color, 20%);
+        color: purple;
+      }
+    }
+  }
+}

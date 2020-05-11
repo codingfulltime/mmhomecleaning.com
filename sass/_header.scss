@@ -1,0 +1,97 @@
+#main-header {
+  height: $viewPortHeight;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 130px 1fr 1fr;
+  font-family: $mainTextFonts;
+  line-height: 1.7;
+  z-index: 7;
+  font-size: $textSmallSize;
+  position: relative;
+
+  .header-column-1 {
+    @include useFlexbox(column, center, center);
+    @include mainGradientColor();
+    grid-row: 1/2;
+    grid-column: 1/2;
+
+    h1 {
+      color: #fff;
+      text-shadow: -5px 5px 5px #000;
+      font-size: $titleSmallSize;
+      text-align: center;
+      margin-top: 15%;
+      font-family: 'Dosis', sans-serif;
+
+      span {
+        color: #1BFFFF;
+      }
+    }
+  }
+
+  .header-column-2 {
+    background: url("../img/showcase-left.jpg") center / cover no-repeat;
+    grid-row: 2/3;
+
+    .header-column-2-text {
+      background: rgba(0,0,0,0.6);
+      padding: 5px;
+      text-align: center;
+      font-size: 1.3rem;
+      font-family: $mainTextFonts;
+      color: lighten($secondary-color, 15%);
+
+      h2 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: $textMediumSize;
+      }
+
+      p {
+        display: none;
+      }
+    }
+  }
+
+  .header-column-3 {
+    /*background: url("../img/showcase-right1.jpg") center / cover no-repeat;*/
+    grid-row: 3/4;
+    grid-column: 1/2;
+    position: relative;
+
+    .video-container {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+      video {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .header-column-3-text {
+      background: rgba(0,0,0,0.6);
+      color: lighten($secondary-color, 15%);
+      padding: 5px;
+      text-align: center;
+      font-size: $btnTextSmallSize;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 5;
+
+      h2 {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      p {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+footer {
+  height: 60vh;
+  font-family: $mainTextFonts;
+  background: #04342A;
+  line-height: 1.7;
+  .footer-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 100px;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+
+    .footer-1 {
+      @include useFlexbox(column,center, center);
+      color: #fff;
+      grid-column: 1/2;
+      grid-row: 2/3;
+      font-size: $textSmallSize;
+
+      h2 {
+        font-size: $titleSmallSize;
+        font-family: $titleFonts;
+      }
+      span {
+        font-size: 1.2rem;
+      }
+
+      a {
+        color: $secondary-color;
+      }
+    }
+    .footer-2 {
+      padding: 10px;
+      grid-column: 1/2;
+      grid-row: 1/2;
+      background: url("../img/california.png") center / cover no-repeat;
+
+      h2 {
+        margin-bottom: 10px;
+        background: rgba(0,0,0,0.8);
+        color: #fff;
+        padding: 10px;
+        font-size: $titleSmallSize;
+        font-family: $titleFonts;
+      }
+    }
+    .footer-3 {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      border-top: $secondary-color solid 2px;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: $textSmallSize;
+
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,163 @@
+// Buttons
+.header-main-button {
+  border-radius: 30px;
+  color: #fff;
+  background: $main-color;
+  border: 2px #fff solid;
+  display: inline-block;
+  padding: 10px 25px;
+  position: absolute;
+  bottom: 30px;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 1;
+}
+
+.services-button {
+  border-radius: 30px;
+  color: #fff;
+  background: $terciary-color;
+  border: 2px #fff solid;
+  display: inline-block;
+  padding: 10px 25px;
+  font-size: 0.8rem;
+
+  &:focus {
+    outline: thin transparent;
+    border: 2px solid purple;
+  }
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+// Modals
+// modals
+.benefits-modal {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 10;
+  overflow: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  .form-modal {
+    @include secondaryGradientColor();
+    color: #000;
+    left: 50%;
+    position: absolute;
+    width: 80vw;
+    height: 80vh;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 20px;
+    font-family: $mainTextFonts;
+    margin: auto;
+    h2 {
+      font-size: $titleSmallSize;
+      font-family: $titleFonts;
+      text-align: center;
+      color: #fff;
+    }
+
+    .form-modal-button {
+      bottom: 10px;
+      left: 10px;
+      padding: 5px 40px;
+      background: $main-color;
+    }
+
+    .closeModalBtn {
+      bottom: 10px;
+      right: 10px;
+      padding: 5px 10px;
+      background: grey;
+    }
+
+    .form-modal-button,
+    .closeModalBtn {
+      position: absolute;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 1rem;
+      &:hover {
+        background: darken($main-color, 10%);
+      }
+    }
+    .form-popup {
+      @include useFlexbox(column, space-around, stretch);
+      font-size: $textSmallSize;
+
+      label {
+        color: #fff;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: $titleSmallSize;
+      }
+      input,
+      textarea {
+        font-size: $textSmallSize;
+        padding: 15px;
+      }
+    }
+  }
+
+}
+
+.modal-services {
+  background: rgba(0,0,0,0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  font-family: $mainTextFonts;
+
+  .modal-services-text {
+    position: absolute;
+    height: 100%;
+    width: 90%;
+    left: 50%;
+    top: 50%;
+    padding: 15px;
+    transform: translate(-50%, -50%);
+    color: #2b2b2b;
+    line-height: 1.7rem;
+    background: #fff;
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+
+    .btnServices-close {
+      padding: 10px 20px;
+      color: #fff;
+      background: purple;
+      margin-top: 10px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      font-family: $titleFonts;
+    }
+  }
+}
+
+#corporateModal,
+#residentialModal {
+  display: none;
+}

@@ -1,0 +1,180 @@
+.call-now {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-family: $mainTextFonts;
+  font-size: $textSmallSize;
+  line-height: 1.7;
+
+  #back-to-top {
+    display: none;
+  }
+
+  span {
+    color: $main-color;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    a {
+      color: $main-color;
+      border-bottom: 2px dashed $main-color;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+#services {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 75px 1fr 1fr;
+  grid-gap: 30px;
+  font-family: $mainTextFonts;
+  line-height: 1.7;
+
+  h2 {
+    font-family: $titleFonts;
+    color: $main-color;
+    font-size: $titleSmallSize;
+  }
+
+  .services-column-1 {
+    @include useFlexbox(column, center, center);
+    @include mainGradientColor();
+    grid-row: 1/2;
+    grid-column: 1/2;
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    h2 {
+      color: #fff;
+      font-size: $titleSmallSize;
+    }
+  }
+
+  .services-col-2-3 {
+    padding: 20px;
+
+    .services-image-2,
+    .services-image-3 {
+      height: 300px;
+      width: 100%;
+      box-shadow: $terciary-color 20px -20px 0 0;
+    }
+
+    p {
+      margin: 15px 0;
+      font-size: $textSmallSize;
+      line-height: 1.7;
+    }
+  }
+
+  .services-column-2 {
+    grid-row: 2/3;
+    grid-column: 1/2;
+
+    .services-image-2 {
+      background: url("../img/livingRoom.jpg") center / cover no-repeat;
+    }
+  }
+
+  .services-column-3 {
+    grid-row: 3/4;
+    grid-column: 1/2;
+
+    .services-image-3 {
+      background: url("../img/coorporateCleaning.jpg") center / cover no-repeat;
+    }
+  }
+
+
+
+  .services-pic-title {
+    font-size: 2rem;
+    margin-top: 15px;
+  }
+
+}
+
+#benefits {
+  @include mainGradientColor();
+  display: grid;
+  height: $viewPortHeight;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 1fr 1fr;
+  padding: 15px;
+  grid-gap: 15px;
+  font-family: $mainTextFonts;
+  line-height: 1.7;
+
+  .title-benefits{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    h2 {
+      color: #fff;
+      font-size: $titleSmallSize;
+      font-family: $titleFonts;
+      text-align: center;
+    }
+  }
+
+  .benefits-col {
+    @include useFlexbox(center, center, flex-end);
+    padding: 10px;
+    text-align: center;
+    position: relative;
+
+    .benefits-text {
+      @include useFlexbox(column, center, center);
+      @include secondaryGradientColor();
+      position: absolute;
+      font-size: $textSmallSize;
+      color: #fff;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 15px;
+      transition: all .7s ease;
+      opacity: 0;
+      p {
+        line-height: 2;
+        margin: 15px 0;
+      }
+      i {
+        font-size: 2rem;
+      }
+    }
+    &:hover .benefits-text {
+      border: 3px solid #000;
+      opacity: 1;
+    }
+
+    span {
+      font-size: $textSmallSize;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+  }
+
+  .benefits-1 {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background: url("../img/affordable.jpg") center / cover no-repeat;
+  }
+  .benefits-2 {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    background: url("../img/vacuum.jpg") center / cover no-repeat;
+  }
+  .benefits-3 {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    background: url("../img/satisfaction.jpg") center / cover no-repeat;
+  }
+}

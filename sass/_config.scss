@@ -1,0 +1,38 @@
+
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1400px;
+  margin: auto;
+}
+
+@mixin useFlexbox( $directionFlex, $justifyFlex, $alignFlex) {
+  display: flex;
+  flex-direction: $directionFlex;
+  justify-content: $justifyFlex;
+  align-items: $alignFlex;
+}
+
+@mixin mainGradientColor(){
+  background: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
+}
+
+@mixin secondaryGradientColor(){
+  background: linear-gradient(to right top, #6a11cb, #5c38db, #4c4fe8, #3963f3, #2575fc);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
