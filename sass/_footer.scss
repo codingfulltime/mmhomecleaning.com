@@ -1,6 +1,5 @@
 footer {
-  height: 60vh;
-  font-family: $mainTextFonts;
+  height: 70vh;
   background: #04342A;
   line-height: 1.7;
   .footer-container {
@@ -12,6 +11,7 @@ footer {
     padding: 10px;
     color: #fff;
     text-align: center;
+    font-family: $mainTextFonts;
 
     .footer-1 {
       @include useFlexbox(column,center, center);
@@ -55,8 +55,15 @@ footer {
       margin-top: 10px;
       font-size: $textSmallSize;
 
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
       span {
         font-size: 1rem;
+        margin: 0;
+        padding: 0;
       }
     }
   }

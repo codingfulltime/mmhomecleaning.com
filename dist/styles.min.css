@@ -96,7 +96,7 @@ body {
   position: fixed;
   width: 100%;
   height: 100vh;
-  top: -100%;
+  top: -120%;
   transition: all 0.8s ease-in-out;
   z-index: 90; }
   .main-nav .main-ul {
@@ -238,9 +238,8 @@ body {
 #benefits {
   background: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
   display: grid;
-  height: 100vh;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px 1fr 1fr 1fr;
+  grid-template-rows: 100px 300px 300px 300px;
   padding: 15px;
   grid-gap: 15px;
   font-family: "Poppins", sans-serif;
@@ -371,7 +370,7 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
-  height: 70vh;
+  height: 90vh;
   font-family: "Poppins", sans-serif;
   padding: 10px;
   line-height: 1.7; }
@@ -452,8 +451,7 @@ body {
         color: purple; }
 
 footer {
-  height: 60vh;
-  font-family: "Poppins", sans-serif;
+  height: 70vh;
   background: #04342A;
   line-height: 1.7; }
   footer .footer-container {
@@ -464,7 +462,8 @@ footer {
     grid-template-rows: 1fr 1fr 100px;
     padding: 10px;
     color: #fff;
-    text-align: center; }
+    text-align: center;
+    font-family: "Poppins", sans-serif; }
     footer .footer-container .footer-1 {
       display: flex;
       flex-direction: column;
@@ -500,8 +499,13 @@ footer {
       padding: 10px;
       margin-top: 10px;
       font-size: 1rem; }
+      footer .footer-container .footer-3 p {
+        margin: 0;
+        padding: 0; }
       footer .footer-container .footer-3 span {
-        font-size: 1rem; }
+        font-size: 1rem;
+        margin: 0;
+        padding: 0; }
 
 .header-main-button {
   border-radius: 30px;
@@ -846,16 +850,17 @@ footer {
         border-radius: 100%; }
       #main-header .header-column-1 h1 {
         position: absolute;
-        top: 30px;
+        top: 80px;
         left: 60px;
         font-size: 4rem;
         animation: heading;
         animation-duration: 3s;
-        animation-fill-mode: forwards; }
+        animation-fill-mode: forwards;
+        z-index: 10; }
       #main-header .header-column-1 .header-main-button {
         position: absolute;
         left: 60px;
-        bottom: 50px;
+        bottom: 80px;
         border-radius: 30px;
         font-weight: bold;
         background: #11be9b;

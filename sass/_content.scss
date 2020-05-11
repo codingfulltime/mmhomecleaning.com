@@ -102,9 +102,8 @@
 #benefits {
   @include mainGradientColor();
   display: grid;
-  height: $viewPortHeight;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px 1fr 1fr 1fr;
+  grid-template-rows: 100px 300px 300px 300px;
   padding: 15px;
   grid-gap: 15px;
   font-family: $mainTextFonts;
