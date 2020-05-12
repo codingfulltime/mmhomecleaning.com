@@ -14,14 +14,14 @@ if (isset($_POST['submit'])) {
 }
 
 if (isset($_POST['user-submit'])) {
-    $name = $_POST['user-name'];
-    $mailFrom = $_POST['user-mail'];
-    $message = $_POST['user-message'];
+    $name1 = $_POST['user-name'];
+    $mailFrom1 = $_POST['user-mail'];
+    $message1 = $_POST['user-message'];
 
-    $mailTo = "vanessa@thespecific.com";
-    $headers = "From: ".$mailFrom;
-    $txt = "You have received an e-mail from ".$name.".\n\n".$message;
+    $mailTo1 = "vanessa@thespecific.com";
+    $headers1 = "From: ".$mailFrom;
+    $txt1 = "You have received an e-mail from ".$name.".\n\n".$message;
 
-    mail($mailTo, $txt, $headers);
+    mail($mailTo1, $txt1, $headers1);
     header("Location: index.php?mailsend");
 }
