@@ -33,7 +33,8 @@ body {
     align-items: center;
     background: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
     grid-row: 1/2;
-    grid-column: 1/2; }
+    grid-column: 1/2;
+    padding: 5px; }
     #main-header .header-column-1 h1 {
       color: #fff;
       text-shadow: -5px 5px 5px #000;
@@ -50,13 +51,13 @@ body {
       background: rgba(0, 0, 0, 0.6);
       padding: 5px;
       text-align: center;
-      font-size: 1.3rem;
+      font-size: 1rem;
       font-family: "Poppins", sans-serif;
       color: #98c5cb; }
       #main-header .header-column-2 .header-column-2-text h2 {
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 1.5rem; }
+        font-size: 1rem; }
       #main-header .header-column-2 .header-column-2-text p {
         display: none; }
   #main-header .header-column-3 {
@@ -79,7 +80,7 @@ body {
       color: #98c5cb;
       padding: 5px;
       text-align: center;
-      font-size: 1.8rem;
+      font-size: 1rem;
       position: absolute;
       width: 100%;
       left: 0;
@@ -88,7 +89,8 @@ body {
       z-index: 5; }
       #main-header .header-column-3 .header-column-3-text h2 {
         text-transform: uppercase;
-        font-weight: bold; }
+        font-weight: bold;
+        font-size: 1rem; }
       #main-header .header-column-3 .header-column-3-text p {
         display: none; }
 

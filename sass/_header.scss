@@ -14,6 +14,7 @@
     @include mainGradientColor();
     grid-row: 1/2;
     grid-column: 1/2;
+    padding: 5px;
 
     h1 {
       color: #fff;
@@ -37,14 +38,14 @@
       background: rgba(0,0,0,0.6);
       padding: 5px;
       text-align: center;
-      font-size: 1.3rem;
+      font-size: 1rem;
       font-family: $mainTextFonts;
       color: lighten($secondary-color, 15%);
 
       h2 {
         text-transform: uppercase;
         font-weight: bold;
-        font-size: $textMediumSize;
+        font-size: 1rem;
       }
 
       p {
@@ -76,7 +77,7 @@
       color: lighten($secondary-color, 15%);
       padding: 5px;
       text-align: center;
-      font-size: $btnTextSmallSize;
+      font-size: 1rem;
       position: absolute;
       width: 100%;
       left: 0;
@@ -87,6 +88,7 @@
       h2 {
         text-transform: uppercase;
         font-weight: bold;
+        font-size: 1rem;
       }
 
       p {
