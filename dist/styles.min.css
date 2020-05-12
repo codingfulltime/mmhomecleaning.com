@@ -370,7 +370,7 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
-  height: 90vh;
+  height: 100vh;
   font-family: "Poppins", sans-serif;
   padding: 10px;
   line-height: 1.7; }
@@ -403,7 +403,7 @@ body {
     height: 100%; }
     .contactForm .main-form .mainFormBtn {
       border-radius: 20px;
-      padding: 10px;
+      padding: 5px 10px;
       font-size: 1rem;
       background: #A468FF;
       color: #fff;

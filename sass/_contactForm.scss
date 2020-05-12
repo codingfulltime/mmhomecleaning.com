@@ -2,7 +2,7 @@
 .contactForm {
   @include useFlexbox(column, center, center);
   @include mainGradientColor();
-  height: 90vh;
+  height: 100vh;
   font-family: $mainTextFonts;
   padding: 10px;
   line-height: 1.7;
@@ -38,7 +38,7 @@
 
     .mainFormBtn {
       border-radius: 20px;
-      padding: 10px;
+      padding: 5px 10px;
       font-size: 1rem;
       background: $terciary-color;
       color: #fff;
