@@ -1,27 +1,22 @@
 <?php
-
-if (isset($_POST['submit'])) {
     $name = $_POST['name'];
-    $mailFrom = $_POST['mail'];
+    $visitor_email = $_POST['email'];
     $message = $_POST['message'];
 
-    $mailTo = "vanessa@thespecific.com";
-    $headers = "From: ".$mailFrom;
-    $txt = "You have received an e-mail from ".$name.".\n\n".$message;
+    $email_from = 'vanessa@thespecific.com';
+    $email_subject = "New Email From M&M Cleaning";
+    $email_body = "User Name: $name.\n".
+                       "User Email: $visitor_email.\n".
+                            "User Message: $message.\n";
 
-    mail($mailTo, $txt, $headers);
-    header("Location: index.php?mailsend");
-}
+    $to = "vanessa@thespecific.com";
 
-if (isset($_POST['user-submit'])) {
-    $name1 = $_POST['user-name'];
-    $mailFrom1 = $_POST['user-mail'];
-    $message1 = $_POST['user-message'];
+    $headers = "From: $email_from \r\n";
 
-    $mailTo1 = "vanessa@thespecific.com";
-    $headers1 = "From: ".$mailFrom;
-    $txt1 = "You have received an e-mail from ".$name.".\n\n".$message;
+    $headers .= "Reply-To: $visitor_email \r\n";
 
-    mail($mailTo1, $txt1, $headers1);
-    header("Location: index.php?mailsend");
-}
+    mail($to,$email_subject,$email_body,$headers);
+
+    header("Location: index.html");
+
+?>
