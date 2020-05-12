@@ -34,7 +34,6 @@ body {
     background: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
     grid-row: 1/2;
     grid-column: 1/2;
-    padding: 2px;
     line-height: 0.9; }
     #main-header .header-column-1 h1 {
       color: #fff;
