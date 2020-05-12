@@ -4,8 +4,8 @@
   @include mainGradientColor();
   height: 100vh;
   font-family: $mainTextFonts;
-  padding: 10px;
   line-height: 1.7;
+  width: 100%;
 
   .contact-picture {
     display: none;
@@ -13,7 +13,6 @@
 
   .contact-form {
     @include useFlexbox(column, center, stretch);
-    height: 95%;
     background: #fff;
     filter: blur(10%);
     padding: 10px;

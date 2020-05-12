@@ -372,8 +372,8 @@ body {
   background: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
   height: 100vh;
   font-family: "Poppins", sans-serif;
-  padding: 10px;
-  line-height: 1.7; }
+  line-height: 1.7;
+  width: 100%; }
   .contactForm .contact-picture {
     display: none; }
   .contactForm .contact-form {
@@ -381,7 +381,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    height: 95%;
     background: #fff;
     filter: blur(10%);
     padding: 10px;
@@ -1020,16 +1019,19 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: stretch;
-    height: 100vh; }
+    align-items: center;
+    height: 100vh;
+    padding: 20px; }
     .contactForm .contact-form .mainFormBtn {
-      width: 30%; }
+      width: 30%;
+      padding: 10px 20px; }
     .contactForm .contact-picture {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       color: #fff;
+      height: 95%;
       border-radius: 20px;
       background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/contactPic.jpg") center/cover no-repeat;
       font-size: 2.5rem;

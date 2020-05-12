@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $mailFrom = $_POST['mail'];
     $message = $_POST['message'];
@@ -9,11 +9,11 @@ if(isset($_POST['submit'])) {
     $headers = "From: ".$mailFrom;
     $txt = "You have received an e-mail from ".$name.".\n\n".$message;
 
-    mail($mailTo, $subject, $txt, $headers);
+    mail($mailTo, $txt, $headers);
     header("Location: index.php?mailsend");
 }
 
-if(isset($_POST['user-submit'])) {
+if (isset($_POST['user-submit'])) {
     $name = $_POST['user-name'];
     $mailFrom = $_POST['user-mail'];
     $message = $_POST['user-message'];
@@ -22,6 +22,6 @@ if(isset($_POST['user-submit'])) {
     $headers = "From: ".$mailFrom;
     $txt = "You have received an e-mail from ".$name.".\n\n".$message;
 
-    mail($mailTo, $subject, $txt, $headers);
+    mail($mailTo, $txt, $headers);
     header("Location: index.php?mailsend");
 }
