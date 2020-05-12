@@ -22,7 +22,7 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 130px 1fr 1fr;
   font-family: "Poppins", sans-serif;
-  line-height: 1.7;
+  line-height: 1.9;
   z-index: 7;
   font-size: 1rem;
   position: relative; }
@@ -34,7 +34,8 @@ body {
     background: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
     grid-row: 1/2;
     grid-column: 1/2;
-    padding: 5px; }
+    padding: 2px;
+    line-height: 0.9; }
     #main-header .header-column-1 h1 {
       color: #fff;
       text-shadow: -5px 5px 5px #000;
