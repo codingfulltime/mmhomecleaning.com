@@ -9,10 +9,12 @@ const right_Btn_Carousel = document.querySelector('.carouselButton-right');
 const left_Btn_Carousel = document.querySelector('.carouselButton-left');
 const slideWidth = carousel_slides[0].getBoundingClientRect().width;
 
+/*
 // modals
 const modal = document.getElementById('benefits-modal');
 const headerBtn = document.getElementById('mainBtn');
 const closeModalBtn = document.getElementById('closeButton');
+*/
 
 
 const corporateModal = document.getElementById('corporateModal');
@@ -27,8 +29,8 @@ const openModalResidential = document.getElementById('openModalResidential');
 
 
 // Event Listeners
-headerBtn.addEventListener('click', openModal);
-closeModalBtn.addEventListener('click', closeModal);
+/*headerBtn.addEventListener('click', openModal);
+closeModalBtn.addEventListener('click', closeModal);*/
 menuIcon.addEventListener('click', useHamburgerMenu);
 
 // Corporate Modal Event Listener
@@ -41,12 +43,12 @@ closeModalResidential.addEventListener('click', closeResidential);
 
 
 // Contact Form - Main Button Header
-function openModal(){
+/*function openModal(){
     modal.style.display = 'block';
 }
 function closeModal(){
     modal.style.display = 'none';
-}
+}*/
 
 // Residential Modal
 function openResidential(){
