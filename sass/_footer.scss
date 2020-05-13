@@ -1,5 +1,4 @@
 footer {
-  height: 70vh;
   background: #04342A;
   line-height: 1.7;
   .footer-container {
@@ -7,7 +6,7 @@ footer {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 100px;
+    grid-template-rows: 200px 200px 100px;
     padding: 10px;
     color: #fff;
     text-align: center;

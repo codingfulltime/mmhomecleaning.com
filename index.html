@@ -181,7 +181,7 @@
     </div>
     <div class="contact-form">
         <h2>Contact Us !</h2>
-        <form action="contactform.php" class="main-form" method="post">
+        <form action="mainform.php" class="main-form" method="post">
             <label for="name-form">Name:</label>
             <input type="text" id="enterName" class="name-form" name="name" placeholder="Enter your name">
 
@@ -190,7 +190,7 @@
 
             <label for="message-form">Message:</label>
             <textarea type="text" id="enterMessage" name="message" placeholder="Enter your message"></textarea>
-            <button type="submit" class="mainFormBtn" name="submit">Send</button>
+            <button type="submit" class="mainFormBtn" name="submit" value="submit">Send</button>
         </form>
     </div>
 </section>
@@ -215,16 +215,16 @@
     <div id="benefits-modal" class="benefits-modal">
         <div id="formModal" class="form-modal">
             <h2>Contact Us !</h2>
-            <form action="" class="form-popup">
+            <form action="contactform.php" class="form-popup">
                 <label for="name-form">Name:</label>
-                <input type="text" id="name-form" class="name-form" name="user-name" placeholder="Enter your name">
+                <input type="text" id="name-form" class="name-form" name="name" placeholder="Enter your name">
 
                 <label for="email-form">Email:</label>
-                <input type="email" id="email-form" class="email-form" name="user-mail" placeholder="Enter your email">
+                <input type="email" id="email-form" class="email-form" name="mail" placeholder="Enter your email">
 
                 <label for="message-form">Message:</label>
-                <textarea type="text" id="message-form" name="user-message" placeholder="Enter your message"></textarea>
-                <button type="submit" class="form-modal-button" name="user-submit">Send</button>
+                <textarea type="text" id="message-form" name="message" placeholder="Enter your message"></textarea>
+                <button type="submit" class="form-modal-button" value="submit" name="submit">Send</button>
                 <button type="submit" class="closeModalBtn" id="closeButton">Close</button>
             </form>
         </div>

@@ -27,10 +27,7 @@ body {
   font-size: 1rem;
   position: relative; }
   #main-header .header-column-1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /*    @include useFlexbox(column, center, center);*/
     background: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
     grid-row: 1/2;
     grid-column: 1/2;
@@ -39,11 +36,13 @@ body {
       color: #fff;
       text-shadow: -5px 5px 5px #000;
       font-size: 2.1rem;
+      font-family: 'Dosis', sans-serif;
+      line-height: 1.2;
       text-align: center;
-      margin-top: 15%;
-      font-family: 'Dosis', sans-serif; }
+      margin-top: 30px; }
       #main-header .header-column-1 h1 span {
-        color: #1BFFFF; }
+        color: #1BFFFF;
+        display: block; }
   #main-header .header-column-2 {
     background: url("../img/showcase-left.jpg") center/cover no-repeat;
     grid-row: 2/3; }
@@ -53,7 +52,7 @@ body {
       text-align: center;
       font-size: 1rem;
       font-family: "Poppins", sans-serif;
-      color: #98c5cb; }
+      color: #68ffff; }
       #main-header .header-column-2 .header-column-2-text h2 {
         text-transform: uppercase;
         font-weight: bold;
@@ -77,7 +76,7 @@ body {
         height: 100%; }
     #main-header .header-column-3 .header-column-3-text {
       background: rgba(0, 0, 0, 0.6);
-      color: #98c5cb;
+      color: #68ffff;
       padding: 5px;
       text-align: center;
       font-size: 1rem;
@@ -184,7 +183,7 @@ body {
       color: #0fa788;
       border-bottom: 2px dashed #0fa788; }
       .call-now span a:hover {
-        color: #65a9b1; }
+        color: #1BFFFF; }
 
 #services {
   display: grid;
@@ -372,10 +371,10 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
-  height: 100vh;
   font-family: "Poppins", sans-serif;
   line-height: 1.7;
-  width: 100%; }
+  width: 100%;
+  padding: 20px 10px; }
   .contactForm .contact-picture {
     display: none; }
   .contactForm .contact-form {
@@ -392,16 +391,16 @@ body {
       font-size: 2.1rem;
       font-family: "Dosis", sans-serif;
       margin: auto; }
-    .contactForm .contact-form label {
-      color: #0fa788;
-      font-size: 1rem;
-      font-weight: 500; }
   .contactForm .main-form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: stretch;
     height: 100%; }
+    .contactForm .main-form label {
+      color: #0fa788;
+      font-size: 1rem;
+      font-weight: 500; }
     .contactForm .main-form .mainFormBtn {
       border-radius: 20px;
       padding: 5px 10px;
@@ -409,7 +408,7 @@ body {
       background: #A468FF;
       color: #fff;
       margin-top: 10px;
-      width: 50%; }
+      width: 100px; }
       .contactForm .main-form .mainFormBtn:hover {
         background: #761cff;
         border: 2px solid #0fa788; }
@@ -419,7 +418,8 @@ body {
     .contactForm .main-form input {
       border-radius: 20px;
       padding: 10px;
-      border: 1px solid grey; }
+      border: 1px solid grey;
+      margin-bottom: 20px; }
       .contactForm .main-form input[type="text"], .contactForm .main-form input[type="email"] {
         color: purple;
         font-size: 1.1rem; }
@@ -434,7 +434,8 @@ body {
       border: 1px solid grey;
       border-radius: 20px;
       height: 200px;
-      resize: none; }
+      resize: none;
+      margin-bottom: 20px; }
       .contactForm .main-form textarea[type="text"] {
         color: purple;
         font-size: 1.1rem;
@@ -452,7 +453,6 @@ body {
         color: purple; }
 
 footer {
-  height: 70vh;
   background: #04342A;
   line-height: 1.7; }
   footer .footer-container {
@@ -460,7 +460,7 @@ footer {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 100px;
+    grid-template-rows: 200px 200px 100px;
     padding: 10px;
     color: #fff;
     text-align: center;
@@ -480,7 +480,7 @@ footer {
       footer .footer-container .footer-1 span {
         font-size: 1.2rem; }
       footer .footer-container .footer-1 a {
-        color: #65a9b1; }
+        color: #1BFFFF; }
     footer .footer-container .footer-2 {
       padding: 10px;
       grid-column: 1/2;
@@ -496,7 +496,7 @@ footer {
     footer .footer-container .footer-3 {
       grid-column: 1/2;
       grid-row: 3/4;
-      border-top: #65a9b1 solid 2px;
+      border-top: #1BFFFF solid 2px;
       padding: 10px;
       margin-top: 10px;
       font-size: 1rem; }
@@ -509,17 +509,17 @@ footer {
         padding: 0; }
 
 .header-main-button {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
   border-radius: 30px;
   color: #fff;
   background: #0fa788;
   border: 2px #fff solid;
   display: inline-block;
-  padding: 10px 25px;
-  position: absolute;
-  bottom: 30px;
-  right: 50%;
-  transform: translateX(50%);
-  z-index: 1; }
+  padding: 5px 20px; }
 
 .services-button {
   border-radius: 30px;
@@ -650,7 +650,7 @@ footer {
     display: none; }
 
   #main-header {
-    grid-template-rows: 70px 200px 1fr 1fr;
+    grid-template-rows: 70px 150px 1fr 1fr;
     grid-template-columns: 1fr 1fr; }
     #main-header .main-nav {
       height: 100%;
@@ -671,19 +671,22 @@ footer {
           color: #fff; }
     #main-header .header-column-1 {
       grid-row: 2/3;
-      grid-column: 1/3; }
+      grid-column: 1/3;
+      text-align: center; }
       #main-header .header-column-1 .logo {
-        top: 15px;
+        top: 10px;
         left: 30px;
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         z-index: 100; }
       #main-header .header-column-1 h1 {
-        margin-top: 0;
         font-size: 4rem; }
+        #main-header .header-column-1 h1 span {
+          display: inline-block; }
       #main-header .header-column-1 .header-main-button {
         bottom: 200px;
-        font-size: 1.2rem; }
+        font-size: 1.2rem;
+        padding: 15px 30px; }
         #main-header .header-column-1 .header-main-button:hover {
           background: #07493c; }
     #main-header .header-column-2 {
@@ -746,7 +749,7 @@ footer {
 
   #benefits {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 1fr 1fr;
+    grid-template-rows: 100px 400px 400px;
     font-size: 1.5rem; }
     #benefits .title-benefits {
       grid-row: 1/2;
@@ -775,10 +778,8 @@ footer {
     font-size: 2rem; }
 
   .contactForm {
-    height: 60vh; }
+    padding: 20px; }
     .contactForm .contact-form {
-      height: 95%;
-      padding: 20px;
       width: 50%;
       margin: auto; }
       .contactForm .contact-form h2 {
@@ -801,24 +802,22 @@ footer {
   .benefits-modal .form-modal {
     height: 50vh; }
 
-  footer {
-    height: 50vh; }
-    footer .footer-container {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 100px; }
-      footer .footer-container .footer-1 {
-        grid-column: 1/2;
-        grid-row: 1/2; }
-      footer .footer-container .footer-2 {
-        grid-column: 2/3;
-        grid-row: 1/2;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: stretch; }
-      footer .footer-container .footer-3 {
-        grid-column: 1/3;
-        grid-row: 2/3; } }
+  footer .footer-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 100px; }
+    footer .footer-container .footer-1 {
+      grid-column: 1/2;
+      grid-row: 1/2; }
+    footer .footer-container .footer-2 {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch; }
+    footer .footer-container .footer-3 {
+      grid-column: 1/3;
+      grid-row: 2/3; } }
 @media (min-width: 1100px) {
   #main-header {
     grid-template-rows: 100px 1fr 200px 200px;
@@ -834,45 +833,34 @@ footer {
           font-weight: 600; }
     #main-header .header-column-1 {
       grid-row: 1/5;
-      grid-column: 1/2;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: center; }
+      grid-column: 1/2; }
       #main-header .header-column-1 .logo {
         position: absolute;
         display: block;
-        height: 100px;
-        width: 100px;
-        top: 50%;
-        left: 80px;
-        transform: translateY(-50%);
+        left: 20px;
         margin-bottom: 50px;
         border-radius: 100%; }
       #main-header .header-column-1 h1 {
         position: absolute;
-        top: 80px;
-        left: 60px;
-        font-size: 4rem;
-        animation: heading;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
-        z-index: 10; }
+        top: 150px;
+        left: 100px;
+        font-size: 6rem;
+        z-index: 10;
+        text-align: left; }
+        #main-header .header-column-1 h1 span {
+          display: block; }
       #main-header .header-column-1 .header-main-button {
-        position: absolute;
-        left: 60px;
-        bottom: 80px;
         border-radius: 30px;
         font-weight: bold;
-        background: #11be9b;
+        background: #0fa788;
         color: #fff;
-        padding: 0;
+        padding: 15px 50px;
         border: 2px #fff solid;
         display: inline-block;
         font-size: 1.3rem;
+        left: 110px;
         transform: translateX(0);
-        width: 150px;
-        text-align: center; }
+        box-shadow: 0 0 4px #fff; }
     #main-header .header-column-2 {
       grid-row: 1/5;
       grid-column: 2/3;
@@ -882,7 +870,6 @@ footer {
       justify-content: flex-end;
       align-items: stretch; }
       #main-header .header-column-2 .header-column-2-text {
-        margin-bottom: 150px;
         height: 150px;
         display: flex;
         flex-direction: column;
@@ -972,8 +959,7 @@ footer {
       line-height: 1.7; }
 
   #benefits {
-    height: 100vh;
-    grid-template-rows: 1fr repeat(5, 1fr);
+    grid-template-rows: 150px repeat(5, 100px);
     grid-template-columns: 1fr 1fr 1fr;
     font-size: 1.5rem;
     grid-gap: 10px; }
@@ -1033,11 +1019,11 @@ footer {
       justify-content: center;
       align-items: center;
       color: #fff;
-      height: 95%;
       border-radius: 20px;
       background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/contactPic.jpg") center/cover no-repeat;
       font-size: 2.5rem;
-      width: 45%; }
+      width: 45%;
+      height: 621px; }
       .contactForm .contact-picture h2 {
         color: yellow;
         font-family: "Dosis", sans-serif; }
@@ -1060,7 +1046,6 @@ footer {
     height: 100%; }
 
   footer .footer-container {
-    width: 70%;
     margin: auto; } }
 
 /*# sourceMappingURL=styles.min.css.map */

@@ -10,7 +10,7 @@
   position: relative;
 
   .header-column-1 {
-    @include useFlexbox(column, center, center);
+/*    @include useFlexbox(column, center, center);*/
     @include mainGradientColor();
     grid-row: 1/2;
     grid-column: 1/2;
@@ -20,12 +20,14 @@
       color: #fff;
       text-shadow: -5px 5px 5px #000;
       font-size: $titleSmallSize;
-      text-align: center;
-      margin-top: 15%;
       font-family: 'Dosis', sans-serif;
+      line-height: 1.2;
+      text-align: center;
+      margin-top: 30px;
 
       span {
-        color: #1BFFFF;
+        color: $secondary-color;
+        display: block;
       }
     }
   }

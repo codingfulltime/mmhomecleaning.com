@@ -2,10 +2,10 @@
 .contactForm {
   @include useFlexbox(column, center, center);
   @include mainGradientColor();
-  height: 100vh;
   font-family: $mainTextFonts;
   line-height: 1.7;
   width: 100%;
+  padding: 20px 10px;
 
   .contact-picture {
     display: none;
@@ -24,16 +24,17 @@
       font-family: $titleFonts;
       margin: auto;
     }
-    label {
-      color: $main-color;
-      font-size: $textSmallSize;
-      font-weight: 500;
-    }
   }
 
   .main-form {
     @include useFlexbox(column, space-around, stretch);
     height: 100%;
+
+    label {
+      color: $main-color;
+      font-size: $textSmallSize;
+      font-weight: 500;
+    }
 
     .mainFormBtn {
       border-radius: 20px;
@@ -42,7 +43,7 @@
       background: $terciary-color;
       color: #fff;
       margin-top: 10px;
-      width: 50%;
+      width: 100px;
       &:hover {
         background: darken($terciary-color, 15%);
         border: 2px solid $main-color;
@@ -57,6 +58,7 @@
       border-radius: 20px;
       padding: 10px;
       border: 1px solid grey;
+      margin-bottom: 20px;
 
       &[type="text"],
       &[type="email"]{
@@ -80,6 +82,7 @@
       border-radius: 20px;
       height: 200px;
       resize: none;
+      margin-bottom: 20px;
       &[type="text"]{
         color: purple;
         font-size: 1.1rem;
