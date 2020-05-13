@@ -152,7 +152,6 @@ body {
         right: 0; }
 
 .hamburger-menu {
-  display: none;
   width: 35px;
   height: 35px;
   position: fixed;
@@ -325,56 +324,71 @@ body {
     grid-column: 1/2;
     background: url("../img/satisfaction.jpg") center/cover no-repeat; }
 
+/*
 #reviews {
   height: 70vh;
   position: relative;
   z-index: 1;
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  line-height: 1.7; }
-  #reviews .reviews-text {
+  font-family: $mainTextFonts;
+  font-size: $textSmallSize;
+  line-height: 1.7;
+
+  .reviews-text {
     display: none;
-    color: #393d3d; }
+    color: $paragraphColor;
+  }
+}
 
 .reviews-carousel {
   position: relative;
   height: 90%;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  z-index: 1; }
-  .reviews-carousel .fas {
+  z-index: 1;
+
+  .fas {
     font-size: 2rem;
     color: #fff;
     position: absolute;
     top: 50%;
     z-index: 2;
-    background: #0fa788;
+    background: $main-color;
     border-radius: 100%;
-    padding: 2px; }
-  .reviews-carousel .fa-arrow-right {
-    right: -10px; }
-  .reviews-carousel .fa-arrow-left {
-    left: -10px; }
-  .reviews-carousel .carousel-container {
+    padding: 2px;
+  }
+  .fa-arrow-right {
+    right: 0;
+  }
+  .fa-arrow-left {
+    left: 0;
+  }
+
+  .carousel-container {
     height: 100%;
     position: relative;
     z-index: 1;
-    overflow: hidden; }
-    .reviews-carousel .carousel-container .carousel-tracker {
+    overflow: hidden;
+
+    .carousel-tracker {
       list-style: none;
       position: relative;
       height: 100%;
-      transition: transform 250ms ease-in; }
-    .reviews-carousel .carousel-container .carousel-item {
+      transition: transform 250ms ease-in;
+    }
+
+    .carousel-item {
       position: absolute;
       top: 0;
       bottom: 0;
-      width: 100%; }
-      .reviews-carousel .carousel-container .carousel-item .carousel-img {
+      width: 100%;
+
+      .carousel-img {
         width: 100%;
         height: 100%;
-        object-fit: cover; }
-      .reviews-carousel .carousel-container .carousel-item .text-reviews {
+        object-fit: cover;
+      }
+
+      .text-reviews {
         position: absolute;
         bottom: 0;
         background: rgba(0, 0, 0, 0.6);
@@ -382,9 +396,73 @@ body {
         width: 100%;
         padding: 10px;
         color: #fff;
-        font-size: 1.4rem; }
-        .reviews-carousel .carousel-container .carousel-item .text-reviews span {
-          color: lightgreen; }
+        font-size: 1.4rem;
+
+        span {
+          color: lightgreen;
+        }
+      }
+    }
+  }
+}*/
+#reviews {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.4; }
+  #reviews .reviews-text {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px; }
+    #reviews .reviews-text h2 {
+      text-align: center;
+      color: #0fa788;
+      font-size: 2.1rem;
+      font-family: "Dosis", sans-serif; }
+  #reviews .reviews-carousel {
+    background: linear-gradient(to right top, #00bf8f, #00906f, #06634e, #0a3a2f, #001510);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 450px; }
+    #reviews .reviews-carousel .carouselButton {
+      position: absolute;
+      top: 50%;
+      color: #fff;
+      background: #0fa788;
+      border-radius: 100%;
+      padding: 10px;
+      z-index: 2;
+      border: none; }
+    #reviews .reviews-carousel .carouselButton-left {
+      left: 0; }
+    #reviews .reviews-carousel .carouselButton-right {
+      right: 0; }
+    #reviews .reviews-carousel .carousel-container {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0; }
+      #reviews .reviews-carousel .carousel-container .carousel-tracker {
+        position: relative;
+        height: 100%; }
+        #reviews .reviews-carousel .carousel-container .carousel-tracker .carousel-item {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; }
+          #reviews .reviews-carousel .carousel-container .carousel-tracker .carousel-item .text-reviews {
+            position: absolute;
+            padding: 10px;
+            font-size: 1rem;
+            color: #fff; }
+            #reviews .reviews-carousel .carousel-container .carousel-tracker .carousel-item .text-reviews span {
+              margin-top: 10px;
+              display: inline-block; }
+          #reviews .reviews-carousel .carousel-container .carousel-tracker .carousel-item img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover; }
 
 footer {
   background: #04342A;
@@ -628,11 +706,22 @@ footer {
       grid-row: 2/3;
       grid-column: 2/3; }
 
-  #reviews .text-reviews {
-    padding: 20px;
-    font-size: 1.5rem; }
-  #reviews .fas {
-    font-size: 2rem; }
+  #reviews {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+    #reviews .reviews-carousel {
+      width: 50%; }
+      #reviews .reviews-carousel .carouselButton {
+        font-size: 0.5rem; }
+    #reviews .reviews-text {
+      padding: 20px;
+      width: 50%; }
+    #reviews .fas {
+      font-size: 2rem; }
 
   footer .footer-container {
     grid-template-columns: 1fr 1fr;
@@ -812,20 +901,16 @@ footer {
       grid-column: 3/4; }
 
   #reviews {
-    height: 90vh;
     display: flex;
     padding: 20px; }
+    #reviews .reviews-carousel {
+      height: 600px; }
     #reviews .reviews-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 80%;
+      width: 50%;
       padding: 50px; }
       #reviews .reviews-text h2 {
         font-size: 4rem;
         font-family: "Dosis", sans-serif;
-        margin-bottom: 20px;
         color: #0fa788; }
       #reviews .reviews-text p {
         font-size: 1.5rem; }
