@@ -1,6 +1,7 @@
 // hamburger menu
 const menuIcon = document.querySelector('.hamburger-menu');
 const navbar = document.querySelector('.main-nav');
+const navLinks = document.querySelectorAll('.nav-link');
 
 // Slider
 const carousel_tracker = document.querySelector('.carousel-tracker');
@@ -27,6 +28,12 @@ const closeModalResidential = document.getElementById('closeModalResidential');
 const openModalResidential = document.getElementById('openModalResidential');
 
 
+// Menu move up on click
+navLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+        navbar.classList.toggle("change");
+    })
+});
 
 // Event Listeners
 /*headerBtn.addEventListener('click', openModal);
