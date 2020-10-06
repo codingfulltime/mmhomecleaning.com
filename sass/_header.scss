@@ -8,12 +8,14 @@
   z-index: 7;
   font-size: $textSmallSize;
   position: relative;
+  width: 100%;
 
   .header-column-1 {
     @include mainGradientColor();
     grid-row: 1/2;
     grid-column: 1/2;
     line-height: 0.9;
+    
 
     .header-phone {
       position: absolute;

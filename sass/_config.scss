@@ -15,10 +15,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  max-width: 1400px;
-  margin: auto;
-}
 
 @mixin useFlexbox( $directionFlex, $justifyFlex, $alignFlex) {
   display: flex;

@@ -1,32 +1,8 @@
-.call-now {
-  width: 100%;
-  text-align: center;
-  padding: 20px;
-  font-family: $mainTextFonts;
-  font-size: $textSmallSize;
-  line-height: 1.7;
 
-  #back-to-top {
-    display: none;
-  }
 
-  span {
-    color: $main-color;
-    font-size: 1.5rem;
-    font-weight: 600;
-
-    a {
-      color: $main-color;
-      border-bottom: 2px dashed $main-color;
-
-      &:hover {
-        color: $secondary-color;
-      }
-    }
-  }
-}
-
-#services {
+.services-wrapper {
+  max-width: 1400px;
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 75px 1fr 1fr;
@@ -99,7 +75,8 @@
 
 }
 
-#benefits {
+
+.benefits-wrapper {
   @include mainGradientColor();
   display: grid;
   grid-template-columns: 1fr;
@@ -108,6 +85,8 @@
   grid-gap: 15px;
   font-family: $mainTextFonts;
   line-height: 1.7;
+  max-width: 1400px;
+  margin: auto;
 
   .title-benefits{
     grid-row: 1/2;

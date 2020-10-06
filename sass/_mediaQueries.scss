@@ -81,27 +81,7 @@
     }
   }
 
-  .call-now {
-    position: relative;
-    #back-to-top {
-      display: inline-block;
-      font-size: 0.6rem;
-      background: $terciary-color;
-      padding: 5px;
-      color: #fff;
-      border-radius: 50px;
-      position: fixed;
-      bottom: 100px;
-      right: 20px;
-      z-index: 5;
-      border: 3px solid #000;
-      &:hover {
-        background: darken($terciary-color, 15%);
-      }
-    }
-  }
-
-  #services {
+  .services-wrapper {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 75px 1fr;
     grid-gap: 20px;
@@ -140,9 +120,9 @@
     }
   }
 
-  #benefits {
+  .benefits-wrapper {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 400px 400px;
+    grid-template-rows: 100px 1fr 1fr;
     font-size: $textMediumSize;
 
     .title-benefits {
@@ -178,7 +158,9 @@
     }
   }
 
-  #reviews {
+  .reviews-wrapper {
+    max-width: 1400px;
+    margin: auto;
     font-size: $textMediumSize;
     line-height: 1.6;
     @include useFlexbox(row, space-around, center);
@@ -315,15 +297,7 @@
     }
   }
 
-  .call-now {
-    height: 15vh;
-    span {
-      height: 100%;
-      font-size: $textMediumSize;
-    }
-  }
-
-  #services {
+  .services-wrapper {
     grid-template-columns: 200px 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     height: $viewPortHeight;
@@ -392,7 +366,7 @@
 
   } // end services
 
-  #benefits {
+  .benefits-wrapper {
     grid-template-rows: 150px repeat(5, 100px);
     grid-template-columns: 1fr 1fr 1fr;
     font-size: $textMediumSize;
@@ -433,7 +407,7 @@
 
   #reviews {
     display: flex;
-    padding: 20px;
+    padding: 10px;
 
     .reviews-carousel {
       height: 600px;
@@ -443,7 +417,7 @@
       padding: 50px;
 
       h2 {
-        font-size: $titleMediumSize;
+        font-size: 3.5rem;
         font-family: $titleFonts;
         color: $main-color;
       }
